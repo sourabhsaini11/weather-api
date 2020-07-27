@@ -13,7 +13,8 @@ const forecast=(lat,long,callback)=>{
             }
             else{
             //  const str=response.body.daily[0].weather[0].description+' It is currently '+response.body.current.temp+' degrres out.'
-               callback(undefined,body.daily[0].weather[0].description+' It is currently '+body.current.temp+' degrres out.')
+            console.log(body.daily[0].weather[0]);
+               callback(undefined,body.daily[0].weather[0].description+' It is currently '+body.current.temp+' degrees out.Maximum Recorded Temperature is '+body.daily[0].temp.max+' degrees while Minimum Recorded Temperature is '+body.daily[0].temp.max+' degrees.')
            }
         })
 }
